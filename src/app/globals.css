@@ -90,6 +90,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .input-control--with-icon { padding-left: 43px; }
 .input-control--with-trailing { padding-right: 42px; }
 .input-hint { display: block; margin-top: 5px; color: var(--muted); font-size: 0.75rem; }
+.owner-picker-results { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; margin-top: 6px; padding: 8px 10px; border: 1px solid var(--border-soft); border-radius: 8px; background: white; }
 
 .card { border: 1px solid var(--border); border-radius: 16px; background: white; box-shadow: var(--shadow); }
 .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 18px 20px 16px; }

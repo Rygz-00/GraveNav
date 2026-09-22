@@ -35,15 +35,65 @@ export type AdminRecord = {
   plot: string;
   section: string;
   recordStatus: "active" | "pending" | "archived";
+  birthDate: string | null;
+  deathDate: string | null;
+  publicDisplay: boolean;
   intermentDate: string | null;
   intermentStatus: string;
   remainsType: string;
   referenceNo: string | null;
+  serviceProvider: string | null;
+  recordSource: string | null;
+  qualityNotes: string | null;
   updatedAt: string;
   location: { latitude: number; longitude: number } | null;
   pixelLocation: { x: number; y: number } | null;
   coordinateStatus: "pending" | "verified" | "rejected";
   coordinateVerified: boolean;
+};
+
+export type AdminLot = {
+  lotId: number;
+  lotCode: string;
+  blockId: number;
+  lotOwnerId: number | null;
+  legacyLocationCode: string | null;
+  legacyPaNumber: string | null;
+  status: "AVAILABLE" | "BOOKED" | "HOLD";
+  lengthM: number | null;
+  widthM: number | null;
+  pxLocX: number | null;
+  pxLocY: number | null;
+  coordinateStatus: "pending" | "verified" | "rejected";
+  coordinateVerified: boolean;
+  location: { longitude: number; latitude: number } | null;
+  updatedAt: string;
+};
+
+export type LotOwner = {
+  lotOwnerId: number;
+  firstName: string;
+  middleName: string | null;
+  lastName: string;
+  suffix: string | null;
+  aliases: string | null;
+  address: string;
+  representativeName: string | null;
+  representativeContact: string | null;
+  representativeRelation: string | null;
+};
+
+export type PlotBlockOption = {
+  blockId: number;
+  label: string;
+  areaName: string | null;
+};
+
+export type BurialPlotOption = {
+  lotId: number;
+  lotCode: string;
+  section: string;
+  status: "AVAILABLE";
 };
 
 export type AdminAccount = StaffAccount & {

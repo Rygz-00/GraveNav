@@ -1,6 +1,6 @@
 import { AdminShell } from "@/components/admin/admin-shell";
-import { AdminOwnerDataPage } from "@/components/admin/admin-page-content";
+import { OwnerDataCrud } from "@/components/admin/admin-crud-pages";
 
 export default function AdminOwnerDataRoute() {
-  return <AdminShell active="Owner data"><AdminOwnerDataPage /></AdminShell>;
+  return <AdminShell active="Owner data"><OwnerDataCrud /></AdminShell>;
 }
